@@ -13,7 +13,7 @@ from pathlib import Path
 
 from py_yt import Playlist, VideosSearch
 
-from delta import logger
+from delta import logger, config
 from delta.helpers import Track, utils
 
 
@@ -23,6 +23,9 @@ class YouTube:
         self.cookies = []
         self.checked = False
         self.cookie_dir = "delta/cookies"
+        self.api_url = str(getattr(config, "API_URL", "")).rstrip("/")
+        self.api_timeout = 60
+        self.api_retries = 3       
         self.warned = False
         self.regex = re.compile(
             r"(https?://)?(www\.|m\.|music\.)?"
