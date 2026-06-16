@@ -29,7 +29,7 @@ class Config:
 
         self.AUTO_END: bool = getenv("AUTO_END", False)
         self.AUTO_LEAVE: bool = getenv("AUTO_LEAVE", False)
-        self.AUTO_DELETE_COMMANDS: bool = getenv("AUTO_DELETE_COMMANDS", "False").lower() == "false"
+        self.AUTO_DELETE_COMMANDS: bool = getenv("AUTO_DELETE_COMMANDS", "False").lower() == "False"
         self.AUTO_DELETE_TIME: int = int(getenv("AUTO_DELETE_TIME", 15))
         self.ANTI_PM_ENABLED: bool = getenv("ANTI_PM_ENABLED", True)
         self.PM_WARN_COUNT: int = int(getenv("PM_WARN_COUNT", 3))
