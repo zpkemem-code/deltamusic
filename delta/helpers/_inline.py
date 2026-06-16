@@ -235,7 +235,7 @@ class Inline:
             ],
             [self.ikb(text="❓ Bantuan", callback_data="help")],
             [
-                self.ikb(text="Owner", url=f"tg://user?id={config.OWNER_ID}"),
+                self.ikb(text="Owner", url=f"https://t.me/959792624119={config.OWNER_ID}"),
                 self.ikb(text="💰 Donate", callback_data="donate"),
             ],
         ]
