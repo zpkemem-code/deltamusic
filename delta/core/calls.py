@@ -127,7 +127,6 @@ class TgCall(PyTgCalls):
                 text = f"""🎵 <b>Sedang Memutar</b>
 
 🎧 <a href='{media.url}'>{media.title}</a>
-
 ⏱ <b>Durasi:</b> {media.duration}
 👤 <b>Diminta oleh:</b> {media.user}"""
                 keyboard = buttons.controls(chat_id)
