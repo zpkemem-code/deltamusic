@@ -4,6 +4,7 @@
 
 
 from pyrogram import types
+from pyrogram.enums import ButtonStyle
 
 # Note: 'app' and 'config' are imported lazily where needed to avoid circular imports
 
@@ -26,11 +27,11 @@ class Inline:
         keyboard = []
         if status:
             keyboard.append(
-                [self.ikb(text=status, callback_data=f"controls status {chat_id}")]
+                [self.ikb(text=status, callback_data=f"controls status {chat_id}", style=ButtonStyle.PRIMARY)]
             )
         elif timer:
             keyboard.append(
-                [self.ikb(text=timer, callback_data=f"controls status {chat_id}")]
+                [self.ikb(text=timer, callback_data=f"controls status {chat_id}", style=ButtonStyle.PRIMARY)]
             )
 
         if not remove:
@@ -44,8 +45,8 @@ class Inline:
             )
             keyboard.append(
                 [
-                    self.ikb(text="➕ Playlist", callback_data=f"controls playlist {chat_id}"),
-                    self.ikb(text="✖ Close", callback_data=f"controls close {chat_id}"),
+                    self.ikb(text="➕ Playlist", callback_data=f"controls playlist {chat_id}", style=ButtonStyle.SUCCESS),
+                    self.ikb(text="✖ Close", callback_data=f"controls close {chat_id}", style=ButtonStyle.DANGER),
                 ]
             )
         return self.ikm(keyboard)
@@ -70,7 +71,7 @@ class Inline:
                 self.ikb(text="⚙️ System Info", callback_data="bot_stats_sudo s"),
             ])
         keyboard.append([
-            self.ikb(text="✖ Close", callback_data="stats_close"),
+            self.ikb(text="✖ Close", callback_data="stats_close", style=ButtonStyle.DANGER),
         ])
         return self.ikm(keyboard)
 
@@ -78,7 +79,7 @@ class Inline:
         """Back button for stats."""
         return self.ikm([
             [self.ikb(text="« Kembali", callback_data="stats_back")],
-            [self.ikb(text="✖ Close", callback_data="stats_close")]
+            [self.ikb(text="✖ Close", callback_data="stats_close", style=ButtonStyle.DANGER)]
         ])
 
     def overall_stats_markup(self, _lang=None, main: bool = False) -> types.InlineKeyboardMarkup:
@@ -96,7 +97,7 @@ class Inline:
             rows = [
                 [
                     self.ikb(text="Kembali", callback_data="help back"),
-                    self.ikb(text="Tutup", callback_data="help close"),
+                    self.ikb(text="Tutup", callback_data="help close", style=ButtonStyle.DANGER),
                 ]
             ]
         else:
@@ -235,7 +236,7 @@ class Inline:
             ],
             [self.ikb(text="❓ Bantuan", callback_data="help")],
             [
-                self.ikb(text="Owner", url=f"https://t.me/959792624119={config.OWNER_ID}"),
+                self.ikb(text="Owner", url=f"https://t.me/959792624119"),
                 self.ikb(text="💰 Donate", callback_data="donate"),
             ],
         ]
