@@ -16,7 +16,7 @@ class YouTube:
         self.base = "https://www.youtube.com/watch?v="
         self.cookies = []
         self.checked = False
-        self.cookie_dir = "anony/cookies"
+        self.cookie_dir = "delta/cookies"
         self.warned = False
         self.api_url = str(getattr(config, "API_URL", "")).rstrip("/")
         self.api_timeout = 60
