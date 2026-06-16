@@ -4,7 +4,7 @@
 
 
 from pyrogram import enums, filters, types
-
+from pyrogram.enums import ButtonStyle
 from delta import app, db
 from delta.helpers import buttons, not_blacklisted
 
@@ -43,8 +43,8 @@ async def playlist_command(_, message: types.Message):
     # Create inline buttons
     keyboard = types.InlineKeyboardMarkup([
         [
-            types.InlineKeyboardButton(text="▶️ Play All", callback_data=f"pl_playall {user_id}"),
-            types.InlineKeyboardButton(text="🗑 Clear All", callback_data=f"pl_clear {user_id}"),
+            types.InlineKeyboardButton(text="▶️ Play All", callback_data=f"pl_playall {user_id}", style=ButtonStyle.SUCCESS),
+            types.InlineKeyboardButton(text="🗑 Clear All", callback_data=f"pl_clear {user_id}", style=ButtonStyle.DANGER),
         ]
     ])
     
