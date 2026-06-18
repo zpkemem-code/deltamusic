@@ -17,7 +17,7 @@ from delta import logger
 
 
 # Base URL API
-BASE_URL = "https://dramabox.sansekai.my.id/api/dramabox"
+BASE_URL = "https://api.sansekai.my.id/#/DramaBox"
 
 
 @dataclass
