@@ -25,7 +25,7 @@ class Config:
         self.SESSION2 = getenv("SESSION2", None)
         self.SESSION3 = getenv("SESSION3", None)
 
-        self.DONATE_QR_IMAGE = getenv("DONATE_QR_IMAGE", "https://files.catbox.moe/2d927j.jpg")
+        self.DONATE_QR_IMAGE = getenv("DONATE_QR_IMAGE", "https://files.catbox.moe/dpbt5v.jpg")
 
         self.AUTO_END: bool = getenv("AUTO_END", False)
         self.AUTO_LEAVE: bool = getenv("AUTO_LEAVE", False)
