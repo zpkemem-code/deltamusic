@@ -37,16 +37,12 @@ class Inline:
         if not remove:
             keyboard.append(
                 [
-                    self.ikb(text="⏹", callback_data=f"controls stop {chat_id}"),
-                    self.ikb(text="⏭", callback_data=f"controls skip {chat_id}"),
+                    self.ikb(text="➕", callback_data=f"controls playlist {chat_id}", style=ButtonStyle.SUCCESS),
+                    self.ikb(text="⏹", callback_data=f"controls stop {chat_id}", style=ButtonStyle.DANGER),
+                    self.ikb(text="⏭", callback_data=f"controls skip {chat_id}", style=ButtonStyle.SUCCESS),
                 ]
             )
-            keyboard.append(
-                [
-                    self.ikb(text="➕ Playlist", callback_data=f"controls playlist {chat_id}", style=ButtonStyle.SUCCESS),
-                    self.ikb(text="✖ Close", callback_data=f"controls close {chat_id}", style=ButtonStyle.DANGER),
-                ]
-            )
+            
         return self.ikm(keyboard)
 
     def stats_buttons(self, _lang=None, is_sudo: bool = False) -> types.InlineKeyboardMarkup:
