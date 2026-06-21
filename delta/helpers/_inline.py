@@ -37,9 +37,9 @@ class Inline:
         if not remove:
             keyboard.append(
                 [
-                    self.ikb(text="ᵖˡᵃʸˡⁱˢᵗ", callback_data=f"controls playlist {chat_id}", style=ButtonStyle.SUCCESS),
-                    self.ikb(text="ˢᵗᵒᵖ", callback_data=f"controls stop {chat_id}", style=ButtonStyle.DANGER),
-                    self.ikb(text="ˢᵏⁱᵖ", callback_data=f"controls skip {chat_id}", style=ButtonStyle.SUCCESS),
+                    self.ikb(text="𝗉𝗅𝖺𝗒𝗅𝗂𝗌𝗍", callback_data=f"controls playlist {chat_id}", style=ButtonStyle.SUCCESS),
+                    self.ikb(text="𝗌𝗍𝗈𝗉", callback_data=f"controls stop {chat_id}", style=ButtonStyle.DANGER),
+                    self.ikb(text="𝗌𝗄𝗂𝗉", callback_data=f"controls skip {chat_id}", style=ButtonStyle.SUCCESS),
                 ]
             )
             
