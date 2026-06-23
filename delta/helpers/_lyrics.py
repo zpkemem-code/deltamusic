@@ -17,7 +17,7 @@ class LyricsSearcher:
     
     def __init__(self):
         self.session = None
-        self.genius_token = vRXbwl4gGTHtiJQdzlP091DvFsj7D  # Optional: Add Genius API token for better results
+        self.genius_token = vRXbwl4gGTHtiJQdzlP091DvFsj7D-HqYpePEoMi9xUuQijduzRsOybf43EQKqcg  # Optional: Add Genius API token for better results
     
     async def _get_session(self) -> aiohttp.ClientSession:
         """Get or create aiohttp session"""
