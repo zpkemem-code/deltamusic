@@ -126,9 +126,9 @@ class TgCall(PyTgCalls):
                 # Enhanced now playing message
                 text = f"""🎵 <b>Sedang Memutar</b>
 
-📌 <b>Judul:</b><a href='{media.url}'>{media.title}</a>
+📌 <a href='{media.url}'>{media.title}</a>
 ⏱ <b>Durasi:</b> {media.duration}
-👤 <b>Diminta oleh:</b> {media.user}"""
+👁‍🗨 <b>Diminta oleh:</b> {media.user}"""
                 keyboard = buttons.controls(chat_id)
                 try:
                     await message.edit_media(
